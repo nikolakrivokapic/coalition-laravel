@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+    'as'    => "home",
+    'uses'  => "Controller@index"
+]);
+
+Route::post('/submit', [
+    'as'    => "submit",
+    'uses'  => "Controller@submit"
+]);
+
+
